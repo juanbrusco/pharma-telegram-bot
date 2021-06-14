@@ -33,8 +33,9 @@ to switch to that environment and have access to the required Python packages, w
 
 ## Heroku
 ### Deploy on Heroku first time       
+<https://elements.heroku.com/buttons/anshumanfauzdar/telegram-bot-heroku-deploy>        
 1. Create "Procfile" with next content:      
-`web gunicorn <el nombre de tu proyecto>.wsgi --log-file -`      
+`worker: python telegram_bot.py`      
 2. Create runtime.txt with next content:        
 `python-3.8.5`      
 3. Heroku configuration. On terminal run:        
@@ -48,11 +49,7 @@ to switch to that environment and have access to the required Python packages, w
 2. Heroku configuration. On terminal run:                     
 `heroku login`      
 `git push heroku branch_to_deploy:master`       
-`heroku run python manage.py migrate` (if model change)       
 `heroku open`   
-#### How can I browse my Heroku database?       
-<https://devcenter.heroku.com/articles/heroku-postgresql>       
-`heroku pg:psql`        
 #### How To Keep Your Free Heroku App Alive and Prevent It From Going to Sleep      
 1- <https://medium.com/better-programming/keeping-my-heroku-app-alive-b19f3a8c3a82>        
 2- <https://github.com/jcarras/rise-and-shine>       

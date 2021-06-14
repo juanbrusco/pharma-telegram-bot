@@ -1,1 +1,1 @@
-web gunicorn pharma-telegram-bot.wsgi --log-file -
+worker: python telegram_bot.py

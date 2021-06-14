@@ -41,9 +41,7 @@ to switch to that environment and have access to the required Python packages, w
 `heroku login`      
 `heroku create <nombre de tu aplicación heroku>`        
 `heroku git:remote -a <nombre de tu aplicación heroku>`     
-`heroku addons:create heroku-postgresql:hobby-dev`      
 `git push heroku branch_to_deploy:master`       
-`heroku run python manage.py migrate`       
 `heroku open`       
 ### Deploy on Heroku after changes        
 1. Push changes to branch       

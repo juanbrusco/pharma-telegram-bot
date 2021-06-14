@@ -1,0 +1,1 @@
+web gunicorn pharma-telegram-bot.wsgi --log-file -

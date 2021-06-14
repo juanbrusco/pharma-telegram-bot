@@ -15,7 +15,16 @@
     - detach from the screen by holding CTRL and pressing A, then D    
     - go to pythonanywhere dashboard/webapp and restart the app     
 - heroku:       
-    -      
+    - <https://elements.heroku.com/buttons/anshumanfauzdar/telegram-bot-heroku-deploy>        
+    - 1. Create "Procfile" with next content: `worker: python telegram_bot.py`              
+    - 2. Create runtime.txt with next content: `python-3.8.5`             
+    - 3. Heroku configuration. On terminal run:        
+        `heroku login`      
+        `heroku create <nombre de tu aplicación heroku>`        
+        `heroku git:remote -a <nombre de tu aplicación heroku>`     
+        `git push heroku branch_to_deploy:master`      
+    - `heroku ps:scale worker=0`        
+    - `heroku ps:scale worker=1`        
 
 ## Conda virtual environments 
 See this [reference](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/) to learn more about Conda virtual environments. There is always a default virtual environment called `base`. **One should not work in that environment**. 
@@ -31,25 +40,6 @@ The first command simply ensures you have the latest conda, which the miniconda 
 * `conda activate telegram_bot_env`  
 to switch to that environment and have access to the required Python packages, when working on your project which requires that virtual environment.        
 
-## Heroku
-### Deploy on Heroku first time       
-<https://elements.heroku.com/buttons/anshumanfauzdar/telegram-bot-heroku-deploy>        
-1. Create "Procfile" with next content:      
-`worker: python telegram_bot.py`      
-2. Create runtime.txt with next content:        
-`python-3.8.5`      
-3. Heroku configuration. On terminal run:        
-`heroku login`      
-`heroku create <nombre de tu aplicación heroku>`        
-`heroku git:remote -a <nombre de tu aplicación heroku>`     
-`git push heroku branch_to_deploy:master`       
-`heroku open`       
-### Deploy on Heroku after changes        
-1. Push changes to branch       
-2. Heroku configuration. On terminal run:                     
-`heroku login`      
-`git push heroku branch_to_deploy:master`       
-`heroku open`   
 #### How To Keep Your Free Heroku App Alive and Prevent It From Going to Sleep      
 1- <https://medium.com/better-programming/keeping-my-heroku-app-alive-b19f3a8c3a82>        
 2- <https://github.com/jcarras/rise-and-shine>       
